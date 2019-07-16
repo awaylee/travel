@@ -10,8 +10,6 @@
               <p class="icon-desc">{{item.desc}}</p>
           </div>
         </swiper-slide>
-        
-        
       </swiper>
     </div>
   </div>
@@ -80,6 +78,7 @@ export default {
 
 <style scoped lang="stylus">
   @import "~styles/varibles.styl"
+  @import "~styles/mixins.styl"
   .icons >>> .swiper-container
     height 0
     padding-bottom 50%
@@ -111,4 +110,5 @@ export default {
       line-height .44rem
       text-align center
       color $darkTextColor
+      ellipsis()
 </style>
