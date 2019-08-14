@@ -22,40 +22,40 @@ export default {
     return {
       iconList: [{
         id: '01',
-        desc: '景点门票1',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '景点门票',
+        url: 'http://s.qunarzz.com/homenode/images/touchheader/piao.png'
       }, {
         id: '02',
-        desc: '景点门票2',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '酒店',
+        url: 'http://s.qunarzz.com/homenode/images/touchheader/hotel.png'
       }, {
         id: '03',
-        desc: '景点门票3',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '度假',
+        url: 'http://s.qunarzz.com/homenode/images/touchheader/flight.png'
       }, {
         id: '04',
-        desc: '景点门票4',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '火车票',
+        url: 'http:////s.qunarzz.com/homenode/images/touchheader/train.png'
       }, {
         id: '05',
-        desc: '景点门票5',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '特惠酒店',
+        url: 'http:////s.qunarzz.com/homenode/images/touchheader/group.png'
       }, {
         id: '06',
-        desc: '景点门票6',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '低价机票',
+        url: 'http://s.qunarzz.com/homenode/images/touchheader/bargainflight.png'
       }, {
         id: '07',
-        desc: '景点门票7',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '民宿',
+        url: 'http://s.qunarzz.com/homenode/images/touchheader/kezhan.png'
       }, {
         id: '09',
-        desc: '景点门票8',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '汽车票船票',
+        url: 'http://s.qunarzz.com/homenode/images/touchheader/bus.png'
       }, {
         id: '00',
-        desc: '景点门票9',
-        url: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
+        desc: '旅游团购',
+        url: 'http://s.qunarzz.com/homenode/images/touchheader/tuan.png'
       }],
       swiperOption: {}
     }
