@@ -2,7 +2,7 @@
   <div id="recommend">
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" alt="">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,24 +17,11 @@
 <script>
 export default {
   name: 'recommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts2/1804/fd/fd9b14f02e001802.jpg_180x120_db1151f3.jpg',
-        title: '暑期热卖相约北京',
-        desc: '亲子欢乐游世园入皇宫逛皇城精华景区一览到底 24H接站'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts0/1706/be/b857682ca4a48a02.jpg_180x120_b9b5b90b.jpg',
-        title: '北京纯玩五日游',
-        desc: ' 全程五星酒店 无购物 不起早 不走马观花 享受休闲旅行慢时光'
-      }, {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/p/tts7/1708/3f/d3d43658a63bcb02.jpg_180x120_fe146a37.jpg',
-        title: '暑期特惠',
-        desc: ' 双人出游 立减50 四天三晚游皇城故宫 览园艺博览会 观升旗仪式'
-      }]
     }
   }
 }
