@@ -58,8 +58,8 @@ export default {
     this.lastCity = this.city
     this.getHomeInfo()
   },
+  // keepalive新增的生命周期
   activated () {
-    console.log('actived')
     if (this.lastCity !== this.city) {
       this.getHomeInfo()
       this.lastCity = this.city
