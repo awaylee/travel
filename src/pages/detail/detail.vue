@@ -2,8 +2,7 @@
   <div>
     <detail-banner></detail-banner>
     <detail-header></detail-header>
-    <div class="content"></div>
-    <detail-list></detail-list>
+    <detail-list :list="list"></detail-list>
   </div>
 </template>
 
@@ -15,9 +14,58 @@ export default {
   name: 'detail',
   components: {
     DetailBanner,
+    DetailHeader,
     DetailList
-    DetailBanner,
-    DetailHeader
+  },
+  data () {
+    return {
+      list: [{
+        title: '成人票',
+        desc: '大连圣亚海洋成人票',
+        price: '240',
+        children: [{
+          title: '成人三馆连票',
+          desc: '大连圣亚海洋成人票',
+          price: '240',
+          children: [{
+            title: '成人三馆连票 某一连锁销售',
+            desc: '大连圣亚海洋成人票',
+            price: '240'
+          }]
+        }, {
+          title: '成人五馆连票',
+          desc: '大连圣亚海洋成人票',
+          price: '240',
+          children: [{
+            title: '成人三馆连票 某一连锁销售',
+            desc: '大连圣亚海洋成人票',
+            price: '240'
+          }]
+        }]
+      }, {
+        title: '学生票',
+        desc: '大连圣亚海洋成人票',
+        price: '240',
+        children: [{
+          title: '成人三馆连票 某一连锁销售',
+          desc: '大连圣亚海洋成人票',
+          price: '240'
+        }]
+      }, {
+        title: '儿童票',
+        desc: '大连圣亚海洋成人票',
+        price: '240',
+        children: [{
+          title: '成人三馆连票 某一连锁销售',
+          desc: '大连圣亚海洋成人票',
+          price: '240'
+        }]
+      }, {
+        title: '特惠票',
+        desc: '大连圣亚海洋成人票',
+        price: '240'
+      }]
+    }
   }
 }
 </script>
