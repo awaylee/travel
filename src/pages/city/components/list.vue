@@ -31,10 +31,6 @@
                  :key="innerItem.id"
                  @click="handleCityClick(innerItem.name)"
               class="item border-bottom">{{innerItem.name}}</div>
-            <div class="item border-bottom">阿拉尔</div>
-            <div class="item border-bottom">阿拉尔</div>
-            <div class="item border-bottom">阿拉尔</div>
-            <div class="item border-bottom">阿拉尔</div>
           </div>
         </div>
       </div>
@@ -63,6 +59,7 @@ export default {
   methods: {
     ...mapMutations(['changeCity']),
     handleCityClick (city) {
+      console.log(111)
       // this.$store.commit('changeCity', city)
       this.changeCity(city)
       this.$router.push('/')
