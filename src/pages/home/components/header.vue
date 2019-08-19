@@ -5,7 +5,7 @@
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
-      输入城市/景点/游玩主题
+      <input type="text" placeholder="输入城市/景点/游玩主题">
     </div>
     <router-link to="/city">
       <div class="header-right">
@@ -44,6 +44,7 @@ export default {
     .back-icon
       font-size .4rem
   .header-input
+    position relative
     flex 1
     background #fff
     border-radius .1rem
@@ -53,6 +54,11 @@ export default {
     margin-left .2rem
     padding-left .2rem
     color #ccc
+    input
+      position absolute
+      width 80%
+      height 100%
+      left .6rem
   .header-right
     float right
     min-width 1.04rem
