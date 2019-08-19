@@ -1,6 +1,10 @@
 <template>
   <div>
-    <detail-banner></detail-banner>
+    <detail-banner
+      :sightName="sightName"
+      :bannerImg="bannerImg"
+      :bannerImgs="gallaryImgs">
+    </detail-banner>
     <detail-header></detail-header>
     <detail-list :list="list"></detail-list>
   </div>
@@ -10,8 +14,9 @@
 import DetailBanner from './components/banner'
 import DetailHeader from './components/header'
 import DetailList from './components/list'
+import axios from 'axios'
 export default {
-  name: 'detail',
+  name: 'Detail',
   components: {
     DetailBanner,
     DetailHeader,
@@ -19,60 +24,39 @@ export default {
   },
   data () {
     return {
-      list: [{
-        title: '成人票',
-        desc: '大连圣亚海洋成人票',
-        price: '240',
-        children: [{
-          title: '成人三馆连票',
-          desc: '大连圣亚海洋成人票',
-          price: '240',
-          children: [{
-            title: '成人三馆连票 某一连锁销售',
-            desc: '大连圣亚海洋成人票',
-            price: '240'
-          }]
-        }, {
-          title: '成人五馆连票',
-          desc: '大连圣亚海洋成人票',
-          price: '240',
-          children: [{
-            title: '成人三馆连票 某一连锁销售',
-            desc: '大连圣亚海洋成人票',
-            price: '240'
-          }]
-        }]
-      }, {
-        title: '学生票',
-        desc: '大连圣亚海洋成人票',
-        price: '240',
-        children: [{
-          title: '成人三馆连票 某一连锁销售',
-          desc: '大连圣亚海洋成人票',
-          price: '240'
-        }]
-      }, {
-        title: '儿童票',
-        desc: '大连圣亚海洋成人票',
-        price: '240',
-        children: [{
-          title: '成人三馆连票 某一连锁销售',
-          desc: '大连圣亚海洋成人票',
-          price: '240'
-        }]
-      }, {
-        title: '特惠票',
-        desc: '大连圣亚海洋成人票',
-        price: '240'
-      }]
+      sightName: '',
+      bannerImg: '',
+      gallaryImgs: [],
+      list: []
     }
+  },
+  methods: {
+    getDetailInfo () {
+      axios.get('/api/detail.json?', {
+        params: {
+          id: this.$route.params.id
+        }
+      }).then(this.handleGetDetailSucc)
+    },
+    handleGetDetailSucc (res) {
+      console.log(res)
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        console.log(data)
+        this.sightName = data.sightName
+        this.bannerImg = data.bannerImg
+        this.gallaryImgs = data.gallaryImgs
+        this.list = data.categoryList
+      }
+    }
+  },
+  mounted () {
+    this.getDetailInfo()
   }
 }
 </script>
 
 <style scoped lang="stylus">
-@import "~styles/varibles.styl"
-.content
-  height 50rem
 
 </style>

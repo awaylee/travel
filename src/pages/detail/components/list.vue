@@ -48,6 +48,8 @@ export default {
     display flex
     padding .2rem
     justify-content space-between
+    .item-left
+      line-height .48rem
     .item-right
       color orange
       font-size .42rem

@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="https://img1.qunarzz.com/p/tts7/1605/c1/ad42f60508d31cf7.jpg_r_640x420x90_93655b91.jpg" alt="">
+      <img class="banner-img" :src="bannerImg" alt="">
       <div class="banner-info">
-        <div class="banner-title">产品编号 3140230995</div>
-        <div class="banner-number"><span class="iconfont banner-icon">&#xe604;</span>39</div>
+        <div class="banner-title">{{sightName}}</div>
+        <div class="banner-number"><span class="iconfont banner-icon">&#xe604;</span>{{bannerImgs.length}}</div>
       </div>
     </div>
     <common-gallary
-      :imgs="imgs"
+      :imgs="bannerImgs"
       v-show="showGallary"
       @close="handleGallaryClose"></common-gallary>
   </div>
@@ -18,10 +18,13 @@
 import CommonGallary from 'common/gallary/gallary'
 export default {
   name: 'banner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
   data () {
     return {
-      imgs: ['https://img1.qunarzz.com/p/tts7/1605/c1/ad42f60508d31cf7.jpg_r_640x420x90_93655b91.jpg',
-        'https://img1.qunarzz.com/p/tts5/1511/74/352a9439dabfe6f7.jpg_r_640x420x90_235e71eb.jpg'],
       showGallary: false
     }
   },
