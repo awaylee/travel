@@ -45,10 +45,10 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
@@ -71,7 +71,6 @@ export default {
     font-size .4rem
 .header-fixed
   position fixed
-  z-index 2
   overflow hidden
   top 0
   right 0

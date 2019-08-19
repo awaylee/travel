@@ -16,7 +16,7 @@ import DetailHeader from './components/header'
 import DetailList from './components/list'
 import axios from 'axios'
 export default {
-  name: 'Detail',
+  name: 'detail',
   components: {
     DetailBanner,
     DetailHeader,
@@ -39,11 +39,9 @@ export default {
       }).then(this.handleGetDetailSucc)
     },
     handleGetDetailSucc (res) {
-      console.log(res)
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
-        console.log(data)
         this.sightName = data.sightName
         this.bannerImg = data.bannerImg
         this.gallaryImgs = data.gallaryImgs
